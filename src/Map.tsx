@@ -62,7 +62,7 @@ export const OlMap = (props: MapProps) => {
     } = props;
 
     const mapElementRef = React.useRef<HTMLDivElement>(null);
-    
+
     const mapObj = new olMap({
         controls: initialMapOptions.controls,
         interactions: initialMapOptions.interactions,
@@ -95,7 +95,7 @@ export const OlMap = (props: MapProps) => {
         onsingleclick && mapObj.on('singleclick', onsingleclick);
 
         mapObj.render();
-        
+
         if (mapElementRef.current) {
             mapObj.setTarget(mapElementRef.current);
         }
@@ -103,8 +103,8 @@ export const OlMap = (props: MapProps) => {
         return function cleanup() {
             mapObj.setTarget(undefined);
         };
-    }, [initialMapProps, mapElementRef]);
-    
+    }, [initialMapOptions, mapElementRef]);
+
     return (
         <CurrentMapContext.Provider value={{ map: mapObj }}>
             <div ref={mapElementRef} {...divProps}>
