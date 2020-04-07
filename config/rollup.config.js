@@ -28,7 +28,7 @@ export default (async () => ({
             modulesOnly: false
         }),*/
         typescript({
-            tsconfig: "./tsconfig.lib.json"
+            tsconfig: "./tsconfig.json"
         }),
         babel({
             sourceMaps: true,

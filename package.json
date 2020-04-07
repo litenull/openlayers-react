@@ -1,32 +1,34 @@
 {
-  "name": "openlayers-react",
-  "version": "1.0.0",
-  "description": "OpenLayer React Components",
-  "author": "",
-  "repository": {
+  "_from": "git+https://github.com/litenull/openlayers-react.git",
+  "_id": "openlayers-react@1.0.0",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/openlayers-react",
+  "_phantomChildren": {},
+  "_requested": {
     "type": "git",
-    "url": "https://github.com/awexfwex/openlayers-react"
+    "raw": "openlayers-react@git+https://github.com/litenull/openlayers-react.git",
+    "name": "openlayers-react",
+    "escapedName": "openlayers-react",
+    "rawSpec": "git+https://github.com/litenull/openlayers-react.git",
+    "saveSpec": "git+https://github.com/litenull/openlayers-react.git",
+    "fetchSpec": "https://github.com/litenull/openlayers-react.git",
+    "gitCommittish": null
   },
-  "license": "MIT",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "typings": "dist/index.d.ts",
-  "scripts": {
-    "serve": "cross-env NODE_ENV=development webpack-dev-server --port 9001 --hot --config examples/config/webpack.config.serve.js --open",
-    "check-types": "tsc",
-    "clean": "rimraf dist",
-    "build": "npm-run-all --serial clean build:lib",
-    "build:lib": "cross-env NODE_ENV=production rollup --config ./config/rollup.config.js",
-    "prebuild:demo": "rimraf examples/dist",
-    "build:demo": "cross-env NODE_ENV=production webpack --config examples/config/webpack.config.build.js",
-    "lint": "eslint --cache \"+(src|examples)/**/*.ts?(x)\""
-  },
-  "keywords": [
-    "openlayer",
-    "typescript",
-    "react",
-    "map"
+  "_requiredBy": [
+    "#DEV:/"
   ],
+  "_resolved": "git+https://github.com/litenull/openlayers-react.git#fbb6de843fe33c1a9a86da8f31d811f8e65a4da8",
+  "_spec": "openlayers-react@git+https://github.com/litenull/openlayers-react.git",
+  "_where": "C:\\Users\\Tomaz Korenika\\ustavimokorono-data",
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/awexfwex/openlayers-react/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "OpenLayer React Components",
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
@@ -68,7 +70,7 @@
     "react-router-dom": "4.3.x",
     "react-syntax-highlighter": "^11.0.2",
     "rimraf": "^3.0.0",
-    "rollup": "^1.19.4",
+    "rollup": "^1.32.1",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-terser": "^5.1.1",
@@ -82,9 +84,35 @@
     "webpack-dev-server": "^3.8.0",
     "webpack-merge": "^4.2.1"
   },
+  "homepage": "https://github.com/awexfwex/openlayers-react#readme",
+  "keywords": [
+    "openlayer",
+    "typescript",
+    "react",
+    "map"
+  ],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "name": "openlayers-react",
   "peerDependencies": {
     "ol": "5.x.x",
     "react": "^16.7.0"
   },
-  "dependencies": {}
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awexfwex/openlayers-react.git"
+  },
+  "scripts": {
+    "build": "npm-run-all --serial clean build:lib",
+    "build:demo": "cross-env NODE_ENV=production webpack --config examples/config/webpack.config.build.js",
+    "build:lib": "cross-env NODE_ENV=production rollup --config ./config/rollup.config.js",
+    "check-types": "tsc",
+    "clean": "rimraf dist",
+    "lint": "eslint --cache \"+(src|examples)/**/*.ts?(x)\"",
+    "prebuild:demo": "rimraf examples/dist",
+    "serve": "cross-env NODE_ENV=development webpack-dev-server --port 9001 --hot --config examples/config/webpack.config.serve.js --open"
+  },
+  "typings": "dist/index.d.ts",
+  "version": "1.0.0"
 }
