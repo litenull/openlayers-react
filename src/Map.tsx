@@ -93,6 +93,8 @@ export const OlMap = (props: MapProps) => {
         onpropertychange && mapObj.on('propertychange', onpropertychange);
         onrendercomplete && mapObj.on('rendercomplete', onrendercomplete);
         onsingleclick && mapObj.on('singleclick', onsingleclick);
+
+        mapObj.render();
         
         if (mapElementRef.current) {
             mapObj.setTarget(mapElementRef.current);
@@ -101,7 +103,7 @@ export const OlMap = (props: MapProps) => {
         return function cleanup() {
             mapObj.setTarget(undefined);
         };
-    }, [mapElementRef]);
+    }, [initialMapProps, mapElementRef]);
     
     return (
         <CurrentMapContext.Provider value={{ map: mapObj }}>
